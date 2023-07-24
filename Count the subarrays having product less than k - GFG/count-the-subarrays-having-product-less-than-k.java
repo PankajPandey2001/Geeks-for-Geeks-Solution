@@ -75,7 +75,8 @@ class Solution {
             
             count += j - i   ; 
             
-            if(j != i).  // ye condition lagani bh
+            if(j != i)  // ye condition lagani bhot jaruri hai , reason is we can see for
+            // the test case ; edge case1 given above ; 
             product = product / a[i] ; 
             
             i++ ; 
