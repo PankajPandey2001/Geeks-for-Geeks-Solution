@@ -89,12 +89,20 @@ class Solution
         
         //. here n/2 -1 se bhi start kar sakte the kyonki complete tree mein non leaf ndoe
         // n/2-1 se phle phle hota hai , aur leaf node mein heapify karke koi fayda nhi ;
+        
         for( int i = n-1 ; i >= 0 ; i--)
         {
             // build(i , arr) ;
             
             heapify( arr , n , i) ; 
         }
+        
+        // hum last se isliye kar re hain kyonki isse kya hoga jab ksiis index par
+        // pahunchenge toh uske baad ke index wala phle hi hum heapify kara chuke honge
+        // toh hum seedha usko uski sahi positio par lakar chhod denge ; 
+        // and complexity of this heapify will become almost o(N) ; 
+        
+        
     }
     
     //Heapify function to maintain heap property.
