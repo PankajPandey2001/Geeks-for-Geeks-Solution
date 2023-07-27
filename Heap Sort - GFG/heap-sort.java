@@ -87,6 +87,8 @@ class Solution
         
         // make max heap , 
         
+        //. here n/2 -1 se bhi start kar sakte the kyonki complete tree mein non leaf ndoe
+        // n/2-1 se phle phle hota hai , aur leaf node mein heapify karke koi fayda nhi ;
         for( int i = n-1 ; i >= 0 ; i--)
         {
             // build(i , arr) ;
