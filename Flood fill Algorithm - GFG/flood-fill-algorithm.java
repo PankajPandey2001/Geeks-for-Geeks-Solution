@@ -44,7 +44,8 @@ class Solution
         // Code here 
         
         
-        if( image[sr][sc] == newColor ) // ye condition lik
+        if( image[sr][sc] == newColor ) // ye condition likhni bhot jaruri thi iske wajah 
+        // se runtime error aa ra tha ; 
         return image  ; 
         
         
