@@ -25,20 +25,32 @@ class Solution {
     static int setBits(int N) {
         // code here
         
-        int count = 0 ; 
-        
-        for( int i = 1 ; i <= 32 ; i++)
-        {
-            int a = 1 << i ; 
-            
-            int temp = N & a ;
-             
-             if( temp  != 0)
-             count++ ; 
-             
-        }
-        
-        
-        return count ; 
+       
+       // by kernigan's method by summet malik sir ; 
+       
+       
+       // first method is simpley running the loop from 0 to 31 , and returning the count
+       // of set bits ; 
+       
+       
+       
+       // second method is , by kernigansmethod
+       
+       
+       int count = 0 ; 
+       
+       
+       while( N != 0)
+       {
+           int num = N & -N ; 
+           
+           N = N - num ; 
+           
+           
+           count++ ; 
+       }
+       
+       
+       return count ; 
     }
 }
