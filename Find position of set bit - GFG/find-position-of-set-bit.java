@@ -30,7 +30,9 @@ class Solution {
         // this is samw question that is power of 2 ; 
         
         // total set bit 1 , bas 2 ke power wale number mein hi hoti hai , 
-        // aur uski position log(N) + 1 ; 
+        // aur uski position log(N) + 1 ; here log is of base 2 , and in java we use
+        // math.log() here log is base e or base 10 , therefore to find base 2 , 
+        // we will use property of log ;  loga(b) = log10(b)/log10(a)
         
         
         if( N == 0)
