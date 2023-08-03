@@ -55,6 +55,18 @@ class DriverClass
 //User function Template for Java
 
 
+
+/*
+      THIS IS NOT OPTIMISED APPROACH , 
+      IN THIS WE ARE FINDING EVERY TIME , THE VERTEX WITH SHORTEST DISTANCE AMONGS THE
+      UNVISITED VERTEX ;
+      
+      
+      
+      INSTEAD WE CAN USE PRIORITYQUEUE TO SAVE OUR TIME ; 
+      
+      
+*/
 class Solution
 {
     //Function to find the shortest distance of all the vertices
