@@ -55,6 +55,59 @@ class DriverClass
 //User function Template for Java
 
 
+class Solution
+{
+    //Function to find the shortest distance of all the vertices
+    //from the source vertex S.
+    static int[] dijkstra(int V, ArrayList<ArrayList<ArrayList<Integer>>> adj, int S)
+    {
+        // Write your code here
+        
+        
+        int distance[] = new int[V] ;
+        
+        for( int i = 0 ; i < V ; i++)
+        {
+            distance[i] = Integer.MAX_VALUE ; 
+            
+        }
+        
+        distance[S] = 0 ; 
+        
+        
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b) -> a[0] - b[0]) ; 
+        
+        int tempo[] = {0 ,S} ; 
+        pq.add(tempo) ; 
+        
+        
+        while(pq.size() != 0)
+        {
+             int temp[] = pq.remove() ; 
+             
+             ArrayList<ArrayList<Integer>> list = adj.get(temp[1]) ; 
+             
+             for( int i = 0 ; i < list.size() ; i++)
+             {
+                 ArrayList<Integer> curr = list.get(i) ; 
+                 
+                 if( distance[curr.get(0)] > distance[temp[1]] + curr.get(1))
+                 {
+                     distance[curr.get(0)] = distance[temp[1]] + curr.get(1) ; 
+                     int newTemp[] = { distance[curr.get(0)] , curr.get(0)} ; 
+                     
+                     pq.add(newTemp) ; 
+                 }
+             }
+        }
+        
+        
+        return distance ; 
+    }
+}
+
+
+
 
 /*
       THIS IS NOT OPTIMISED APPROACH , 
@@ -66,7 +119,7 @@ class DriverClass
       INSTEAD WE CAN USE PRIORITYQUEUE TO SAVE OUR TIME ; 
       
       
-*/
+
 class Solution
 {
     //Function to find the shortest distance of all the vertices
@@ -134,4 +187,5 @@ class Solution
         
     }
 }
+*/
 
