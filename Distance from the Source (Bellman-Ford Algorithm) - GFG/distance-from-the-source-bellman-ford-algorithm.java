@@ -86,6 +86,11 @@ class Solution {
         }
         
         
+        // to detect negative cycle ; 
+        
+        // ek baar dubara har edge ke liye dekhenge ki koi edge abhi bhi relax ho paa ri 
+        // hai kya , agar ho paa ri hai , toh hum 
+        // iska matlab negative cycle hai graph mein ;
         for( int j = 0 ; j < edges.size() ; j++)
         {
             ArrayList<Integer>temp = edges.get(j) ; 
