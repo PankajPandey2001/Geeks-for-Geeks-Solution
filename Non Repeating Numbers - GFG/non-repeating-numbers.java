@@ -41,36 +41,39 @@ class Solution
     {
         // Code here
         
+        
+        // this is a questoin of bit manipulation , basically; 
+        
+        
         int xor = 0 ; 
         
-        for( int i = 0 ; i < nums.length ; i++)
+        
+        for( int i = 0 ; i < nums.length  ; i++)
         {
-            xor = xor^ nums[i] ; 
+            xor = xor ^ nums[i] ; 
         }
         
         
-        int rightSetBitMask = xor & -xor ; 
         
+        int rsb = xor & -xor ; 
         
-        int xor1 = 0 ; 
-        int xor2 = 0 ; 
-        
+         int xor1 = 0 ; 
+         int xor2 = 0 ; 
+         
          for( int i = 0 ; i < nums.length ; i++)
-        {
-            int bit = nums[i] & rightSetBitMask ; 
-            
-            if( bit == 0 )
-            xor1 = xor1 ^ nums[i] ; 
-            else
-            xor2 = xor2^nums[i] ;
-        }
-        
-        int answer[] = new int[2] ; 
-        
-        answer[0] = Math.min(xor1 , xor2) ; 
-        answer[1] = Math.max(xor1 , xor2) ;
-        
-        return answer ; 
-        
+         {
+             if( (nums[i] & rsb) != 0)
+             {
+                 xor1 = xor1 ^ nums[i] ; 
+             }
+             else
+             xor2 = xor2 ^ nums[i] ; 
+         }
+         
+         
+         int answer[] = {Math.min(xor1,xor2) , Math.max(xor1,xor2)} ;
+         
+         
+         return answer ; 
     }
 }
