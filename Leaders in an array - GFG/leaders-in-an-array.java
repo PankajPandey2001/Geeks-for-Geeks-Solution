@@ -50,27 +50,43 @@ class Solution{
     static ArrayList<Integer> leaders(int arr[], int n){
         // Your code here
         
-        ArrayList<Integer> list = new ArrayList<>()  ; 
+        
+        ArrayList<Integer> list= new ArrayList<>() ; 
+        
+        list.add(arr[arr.length-1]) ; 
+        
+        int large = arr[arr.length-1] ;
         
         
-        int max = Integer.MIN_VALUE ; 
-        
-        
-        for( int i = arr.length-1 ; i >=0 ; i--)
+        for( int i = arr.length-2 ; i >= 0 ; i--)
         {
-            if( arr[i] >= max)
+            if( arr[i] >= large)
             {
-                list.add(arr[i]) ; 
+                large = arr[i] ; 
                 
-                max = arr[i] ; 
+                list.add(arr[i]) ; 
             }
         }
         
         
-        Collections.sort(list, Collections.reverseOrder()) ; 
+       int i = 0 ; 
+       int j = list.size()-1 ; 
+       
+       while ( i < j )
+       {
+           int temp = list.get(j) ; 
+           
+           list.set(j , list.get(i)) ; 
+           
+           
+           list.set(i , temp) ;
+           
+           
+           i++ ; 
+           j-- ; 
+       }
         
         
         return list ; 
     }
-    
 }
