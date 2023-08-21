@@ -60,6 +60,12 @@ class Solution {
              int currMin = Math.min(arr[i+1]-k , min); 
              
              
+             // this below condition is the only difference in minimise the height-I and
+             // minimise the height-iil
+             
+             // basically we have to cram it ; both the quesiton s are same , but 
+             // if we have given that value can not be negative , we will just ; 
+             // write the if condition to excape that case ; 
              if(currMin < 0)
              continue ;
              
