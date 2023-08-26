@@ -72,8 +72,13 @@ class Solution {
         
         // fir agar pallindrom bnate wakt hi naya num purane num se badha h fir toh 
         // dikkat nhi hai. par agar chhota bana toh , 
+        
+        
+        
         // bich se number ki values badhana shuru karenge , na aage se na picche se ; 
-        // means 1 4 5 6 , hai toh ye ho ja
+        // means 1 4 5 6 , hai toh ye ho jayga , 1 4 4 1 , par ab pallindrome toh
+        // ban gya , par chhota ho gya , so humein ise badhana hoga , aur badhane ke liye
+        // bich se badhana shruru karenge ; so we wil do 1 5 5 1 ; 
         
         
         while( j - i > 1)
