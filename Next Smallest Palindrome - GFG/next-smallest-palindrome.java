@@ -34,6 +34,15 @@ class GFG {
 // exectption hai agar number mein sirf 9 h toh ; jaise 9 , 9 9 , 9999 , 
 // so in cases mein answer wale number mein 1 diigit jyada hogi aur wo is format ka hoga 11 , 101 , 1001 , 10001 aise
 
+/*
+   important point to remember is jitna prefix same hoga tow numbers ka wo utne hi close honge
+   
+   means jitni shuruaat se length ki values  same hogi , utne hi do number aapas mein close honge
+   
+   
+   
+*/
+
 class Solution {
 
     Vector<Integer> generateNextPalindrome(int num[], int n) {
@@ -56,11 +65,15 @@ class Solution {
         
         boolean madeLarger = false; // means humein basically is number se badha par , baakiyon
         // se chhota banana hai , aur pallindrom bhi , toh hum suffix wali value ko 
-        // prefix ki value ke barabaar karne ki kosish karenge; ,  so that jo naya num
+        // prefix ki value ke barabaar karne ki kosish karenge; ,  
+        // kyonki prefix same rakhne se , naya number purane number ke closest hoga ; 
+        // so that jo naya num
         // bane wo initial num ke pass wala hi ho ; 
         
         // fir agar pallindrom bnate wakt hi naya num purane num se badha h fir toh 
         // dikkat nhi hai. par agar chhota bana toh , 
+        // bich se number ki values badhana shuru karenge , na aage se na picche se ; 
+        // means 1 4 5 6 , hai toh ye ho ja
         
         
         while( j - i > 1)
