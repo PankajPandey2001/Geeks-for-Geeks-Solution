@@ -37,17 +37,16 @@ class Solution{
     // Function to check if given number n is a power of two.
     public static boolean isPowerofTwo(long n){
         
-        // Your code here
-        
         if( n == 0)
-        return false ; 
+        return false  ; 
         
-         
-         long temp = n & (n-1) ; 
-         
-        if(temp == 0)
+        
+        if( n == 1)
         return true ; 
         
+        
+        if( (n & n-1) == 0)
+        return true ; 
         
         return false ; 
         
