@@ -29,12 +29,18 @@ class Solution
 {
     public int is_bleak(int n)
     {
-        //  this question is conceptual , the thing is we know ki 32 bits ihi hoti hain
+        //  this question is conceptual , the thing is we know ki 32 bits hi hoti hain
         // aur so count(set bits in any numbr) will lie from 0 to 32 ; 
         
         // so now we cant take zero as it given in quesiotn , istead of running loop in 
         // O(N) complexity , we will take only 32 previous number of the given number ; 
-        // kyunoki humein 1 se 32 tak hi add karne hain 
+        // kyunoki humein 1 se 32 tak hi add karne hain , aur give numger ( n ) hai toh
+        // n -32 se phle ka koi bhi number humare kaam ka nhi , kyonki wo countsetbits 
+        // ke saath add hokar n se kam hi number edega
+        
+        
+        
+        // so the catch is that hum n se phle ke 32 number hi check karenge ; 
         
         
         if( n == 1)
